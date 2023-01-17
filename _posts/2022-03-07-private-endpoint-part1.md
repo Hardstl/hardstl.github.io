@@ -44,10 +44,10 @@ Deploy your privatelink DNS zones by running New-AzResourceGroupDeployment and p
 New-AzResourceGroupDeployment -ResourceGroupName "central-dns-rg" -TemplateFile ".\dns.bicep" -TemplateParameterFile ".\dns.parameters.json"
 ```
 
-Note: There are a few region based zones that are not in included in the list.
-privatelink.{region}.batch.azure.com
-privatelink.{region}.azmk8s.io
-privatelink.{region}.backup.windowsazure.com
+Note: There are a few region based zones that are not in included in the list. \
+privatelink.{region}.batch.azure.com \
+privatelink.{region}.azmk8s.io \
+privatelink.{region}.backup.windowsazure.com \
 privatelink.{region}.hypervrecoverymanager.windowsazure.com
 
 ## Configure forwarder in Azure
