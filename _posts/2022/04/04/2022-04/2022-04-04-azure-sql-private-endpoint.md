@@ -109,6 +109,7 @@ As you no longer have a Private Endpoint and connections are back to using inter
 ![ad-dns-cachepublic](ad-dns-cachepublic.png)
 
 # Conclusion
+
 Thanks for reading. My socials are in left menu, feel free to reach out or follow! 🙂
 
 - The cost of one Private Endpoint is roughly $7.30 per month, excluding data costs
