@@ -39,17 +39,17 @@ Save below code as dns.parameters.json in the same folder as the dns.bicep fi
 
 <script src="https://gist.github.com/Hardstl/2f558a6afe33dea9c83b6943330c5a8c.js"></script>
 
-Deploy your privatelink DNS zones by running New-AzResourceGroupDeployment and provide the Bicep and parameter file.
-
-```powershell
-New-AzResourceGroupDeployment -ResourceGroupName "central-dns-rg" -TemplateFile ".\dns.bicep" -TemplateParameterFile ".\dns.parameters.json"
-```
-
 Note: There are a few region based zones that are not in included in the list. \
 privatelink.{region}.batch.azure.com \
 privatelink.{region}.azmk8s.io \
 privatelink.{region}.backup.windowsazure.com \
 privatelink.{region}.hypervrecoverymanager.windowsazure.com
+
+Deploy your privatelink DNS zones by running New-AzResourceGroupDeployment and provide the Bicep and parameter file.
+
+```powershell
+New-AzResourceGroupDeployment -ResourceGroupName "central-dns-rg" -TemplateFile ".\dns.bicep" -TemplateParameterFile ".\dns.parameters.json"
+```
 
 ## Configure forwarder in Azure
 
@@ -127,10 +127,44 @@ The next step is to integrate the different privatelink DNS zones in Azure to yo
 
 # Deploy Private Endpoint
 
-It's time to deploy a Private Endpoint for a Storage Account named stapendtest001 in virtual network vnt-corevnet-noea-001, and also integrate it with the previously created zone privatelink.blob.core.windows.net. This will associate a NIC with the Storage Account and let me access it over my private network.
+It's time to deploy a Private Endpoint for a Storage Account named **stapendtest001** in virtual network **vnt-corevnet-noea-001**, and also integrate it with the previously created zone **privatelink.blob.core.windows.net**. This will associate a NIC with the Storage Account and let me access it over my private network.
 
 Before deploying the Private Endpoint, this is how nslookup resolves the public DNS name of the Storage Account.
 
 ![resolve-before](resolve-before.png)
 
 To deploy the Private Endpoint, go to the Storage Account > Networking > Private endpoint connections and create a new one.
+
+![deploy-private-endpoint1](deploy-private-endpoint1.png)
+
+Preferably select the same resource group where your Storage Account is placed, and the same region as your virtual network is in.
+
+![deploy-private-endpoint2](deploy-private-endpoint2.png)
+
+Select the target subresource, in this case blob storage.
+
+![deploy-private-endpoint3](deploy-private-endpoint3.png)
+
+Select your virtual network and subnet to connect your Storage Account to, it will get the next available IP from this subnet. Make sure to integrate it with the previously created privatelink DNS zone that has been linked to your hub vnet.
+
+![deploy-private-endpoint4](deploy-private-endpoint4.png)
+
+The Private Endpoint has now been deployed with an associated NIC and private IP.
+
+![deploy-private-endpoint5](deploy-private-endpoint5.png)
+
+If everything has gone according to plan, nslookup should now resolve the Public DNS name **stapendtest001.blob.core.windows.net** to your Private Endpoint, and connections are now secured in your private network!
+
+![resolve-after](resolve-after.png)
+
+We can now remove all the public access for our service and we can start implementing access only from certain private IPs or subnets.
+
+# Give me the short version
+
+What we've basically done here is:
+
+1. Create the privatelink DNS zones in Azure.
+2. Configure DNS forwarder in the Azure domain controller to 168.63.129.16.
+3. Configure DNS conditional forwarders for the public DNS zones of the PaaS services in the on-premises domain controllers to the Azure domain controllers.
+4. Set up vnet links for the privatelink DNS zones to your hub vnet where the Azure domain controller resides.
+5. Deploy a Private Endpoint and integrate it with the privatelink DNS zone for blob storage.
