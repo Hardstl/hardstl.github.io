@@ -30,11 +30,11 @@ Older generations of App Service Environment were rather expensive. Now the cost
 
 If you require private inbound and outbound connectivity for your deployed applications I would consider deploying an ASEv3. But, it's not always that simple as cost is a huge factor and smaller non-isolated app service plans are way cheaper. On the other hand, if private networking for apps is needed, Private Endpoints have to be deployed for each app, and VNet integration configured. The cost of a Private Endpoint is around $7 and can quickly add up for multiple apps.
 
-A smaller sized solution consisting of a small set of apps with associated Private Endpoints and VNet integration won't really benefit from an ASEv3. The cost here is around $90.
+A smaller sized solution consisting of a small set of apps with associated Private Endpoints and VNet integration won't really benefit from an ASEv3. The cost here is around $90/month.
 
 ![cost-s1plan](cost-s1plan.png)
 
-A medium sized solution consisting of a few more apps that are all associated with Private Endpoints might benefit from an ASEv3. The cost here is around $190, which is still cheaper than the lowest priced Isolated V2 plan that costs around $220 (with reservation). However, the benefit of not having to care about creating Private Endpoints and to VNet integrate all the apps will reduce a lot of complexity for your developers. Simply creating an app inside an Isolated plan and reaping all the benefits is a pretty nice thing to have.
+A medium sized solution consisting of a few more apps that are all associated with Private Endpoints might benefit from an ASEv3. The cost here is around $190/month, which is still cheaper than the lowest priced Isolated V2 plan that costs around $220/month (with reservation). However, the benefit of not having to care about creating Private Endpoints and to VNet integrate all the apps will reduce a lot of complexity for your developers. Simply creating an app inside an Isolated plan and reaping all the benefits is a pretty nice thing to have.
 
 The plans compared both have 2 Cores and 8 GB RAM.
 
@@ -97,3 +97,5 @@ Create the app the same way, select the ASEv3 instance under region and then the
 The app is now reachable from inside my network, as long as port openings and routes are in place.
 
 ![access-app](access-app.png)
+
+Thanks for reading!
