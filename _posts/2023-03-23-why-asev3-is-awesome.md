@@ -7,13 +7,13 @@ tags: [Azure, Network]
 img_path: /assets/img/2023-03-19-why-asev3-is-awesome/
 ---
 
-The App Service Environment v3 is an impressive technology that has brought significant improvements to secure cloud computing. It offers a range of features that enhance the performance, security, and scalability of web applications. With this new version, developers and IT professionals can create and deploy secure web applications more efficiently without having to worry about infrastructure management.
+The App Service Environment v3 has brought significant improvements to secure cloud computing. It offers a range of features that enhance the performance, security, and scalability of web applications. With this new version, developers and IT professionals can create and deploy secure web applications more efficiently without having to worry about infrastructure management.
 
 What truly makes it awesome is how it integrates with virtual networks, providing applications with private inbound and outbound access without having to do any additional configuration on the App Services.
 
 ## What is App Service Environment v3
 
-App Service Environment v3 provides a secure and isolated environment for hosting web applications. It's designed to offer enhanced scalability, security, and performance for applications that require high levels of isolation, network security, and regulatory compliance. It is built on top of Azure Virtual Network and offers advanced features, such as virtual IP addresses and custom domains.
+App Service Environment v3 provides a secure and isolated environment for hosting web applications. It's designed to offer enhanced scalability, security, and performance for applications that require high levels of isolation, network security, and regulatory compliance. It is built on top of Azure Virtual Network and offers features such as virtual IP addresses and custom domains.
 
 It has full support for Network Security Groups and Route tables, making traffic management almost identical as running a VM on a virtual network.
 
