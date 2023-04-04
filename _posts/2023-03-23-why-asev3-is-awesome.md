@@ -9,7 +9,7 @@ img_path: /assets/img/2023-03-19-why-asev3-is-awesome/
 
 The App Service Environment v3 is an impressive technology that has brought significant improvements to secure cloud computing. It offers a range of features that enhance the performance, security, and scalability of web applications. With this new version, developers and IT professionals can create and deploy secure web applications more efficiently without having to worry about infrastructure management.
 
-What truly makes it awesome is how it integrates with virtual networks, providing applications with private inbound and outbound access without having to do any additional configuration.
+What truly makes it awesome is how it integrates with virtual networks, providing applications with private inbound and outbound access without having to do any additional configuration on the App Services.
 
 ## What is App Service Environment v3
 
@@ -20,7 +20,7 @@ It has full support for Network Security Groups and Route tables, making traffic
 The following services can be hosted:
 
 - Windows and Linux web apps
-- Docker containers
+- Docker containers (on web apps)
 - Function apps
 - Logic apps (Standard)
 
