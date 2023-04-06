@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why App Service Environment v3 is Awesome!"
-date: 2023-03-23 14:00:00 -0000
+date: 2023-04-06 14:00:00 -0000
 categories: [Network]
 tags: [Azure, Network]
 img_path: /assets/img/2023-03-19-why-asev3-is-awesome/
