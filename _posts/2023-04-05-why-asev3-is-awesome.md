@@ -102,4 +102,4 @@ The app is now reachable from inside my network, as long as port openings and ro
 
 Personally, I love how easy this service is to use, and how much it brings to the table.
 
-The decision to implement an App Service Environment v3 is most often primarily influenced by financial considerations. A thorough financial analysis should take into account the size of App Service Plans, number of apps, and the quantity of Private Endpoints. However, it is crucial to also factor in the additional administrative expenses, team training pertaining to Private Endpoints, and consultant fees.
+The decision to implement an App Service Environment v3 is most often primarily influenced by financial considerations. A thorough financial analysis should take into account the size of App Service Plans, number of apps, and the quantity of Private Endpoints. However, it is crucial to also factor in the additional administrative expenses, team training pertaining to Private Endpoints, and consultant fees. 
