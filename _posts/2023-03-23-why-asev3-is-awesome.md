@@ -28,7 +28,7 @@ Older generations of App Service Environment were rather expensive. Now the cost
 
 ## When should you use App Service Environment v3?
 
-If you require private inbound and outbound connectivity for your deployed applications I would consider deploying an ASEv3. But, it's not always that simple as cost is a huge factor and smaller non-isolated app service plans are way cheaper. On the other hand, if private networking for apps is needed, Private Endpoints have to be deployed for each app, and VNet integration configured. The cost of a Private Endpoint is around $7 and can quickly add up for multiple apps.
+If you require private inbound and outbound connectivity for your deployed applications I would consider deploying an ASEv3. But, it's not always that simple as cost is a huge factor and smaller non-isolated app service plans are way cheaper. On the other hand, if private networking for apps is needed, Private Endpoints have to be deployed for each app, and VNet integration configured. The cost of a Private Endpoint is around $7 and can quickly add up for multiple apps. In an ASEv3, there's no need to create additional Private Endpoints for your apps!
 
 A smaller sized solution consisting of a small set of apps with associated Private Endpoints and VNet integration won't really benefit from an ASEv3. The cost here is around $90/month.
 
@@ -98,4 +98,8 @@ The app is now reachable from inside my network, as long as port openings and ro
 
 ![access-app](access-app.png)
 
-Thanks for reading!
+## Conclusion
+
+Personally, I love how easy this service is to use, and how much it brings to the table.
+
+The decision to implement an App Service Environment v3 is most often primarily influenced by financial considerations. A thorough financial analysis should take into account the size of App Service Plans, number of apps, and the quantity of Private Endpoints. However, it is crucial to also factor in the additional administrative expenses, team training pertaining to Private Endpoints, and consultant fees.
