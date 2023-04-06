@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Why App Service Environment v3 is Awesome!"
-date: 2023-04-06 14:00:00 -0000
+date: 2023-04-05 14:00:00 -0000
 categories: [Network]
 tags: [Azure, Network]
-img_path: /assets/img/2023-03-19-why-asev3-is-awesome/
+img_path: /assets/img/2023-04-05-why-asev3-is-awesome/
 ---
 
 The App Service Environment v3 has brought significant improvements to secure cloud computing. It offers a range of features that enhance the performance, security, and scalability of web applications. With this new version, developers and IT professionals can create and deploy secure web applications more efficiently without having to worry about infrastructure management.
