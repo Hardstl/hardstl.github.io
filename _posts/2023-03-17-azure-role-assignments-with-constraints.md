@@ -138,4 +138,4 @@ New-AzRoleAssignment @Params
 
 ## Final thoughts
 
-I must acknowledge that I find this feature highly appealing, and I firmly believe that it will bring significant benefits to both IT administrators and developers alike. Previously, granting Owner or User Access Administrator permissions often entailed a considerable amount of responsibility for Azure stakeholders, akin to providing them with unrestricted access. However, with this new feature, we can now delegate some of the RBAC assignments to stakeholders, which will ultimately result in reduced wait times and minimize unwarranted frustration.
+I must say that I find this feature highly appealing, and I firmly believe that it will bring significant benefits to both IT administrators and developers alike. Previously, granting Owner or User Access Administrator permissions often entailed a considerable amount of responsibility for Azure stakeholders, akin to providing them with unrestricted access. However, with this new feature, we can now delegate some of the RBAC assignments to stakeholders, which will ultimately result in reduced wait times and minimize unwarranted frustration.
