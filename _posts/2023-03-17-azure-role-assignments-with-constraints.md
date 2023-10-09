@@ -102,7 +102,7 @@ New-AzRoleAssignment @Params
 
 ### Another example
 
-In this example I'm using the advanced condition editor. Users are able to assign all roles except **Owner** and **User Access Administrator** for all principal types; users, group, and service principals. This is done by negating the expression by ticking the checkbox when configuring what roles can be assigned.
+Here I'm using the advanced condition editor. Users are able to assign all roles except **Owner** and **User Access Administrator** for all principal types; users, group, and service principals. This is done by negating the expression by ticking the checkbox when configuring what roles can be assigned.
 
 An imporant thing to note here is that when a user assigns a role to another user not already present in the tenant, a guest invitation will be sent out, unless guest invitation is restricted.
 
