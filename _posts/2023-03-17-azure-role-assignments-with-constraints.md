@@ -38,7 +38,7 @@ With this new feature, we can instead delegate Dara the ability to assign only c
 
 ### Getting started
 
-*Click the images to enlarge them*
+*Click the images to enlarge them* 
 
 To get started follow the below steps.
 
