@@ -92,7 +92,7 @@ $condition = "
 $Params = @{
     roleDefinitionId = "f58310d9-a9f6-439a-9e8d-f62e7b41a168" # Role Based Access Control Administrator
     objectId = "f2358f05-6fac-4a84-ad43-0f17ae694d18" # My Azure AD group
-    scope = "/subscriptions/3955eb45-74ab-49f6-ae3f-b35f6073ac8c"
+    scope = "/subscriptions/3955eb45-74ab-49f6-ae3f-b35f6073ac8c" # My scope (/subscriptions/<sub-id>)
     conditionVersion = "2.0"
     condition = $condition
 }
@@ -102,7 +102,7 @@ New-AzRoleAssignment @Params
 
 ### Another example
 
-In this example, users are able to assign all roles except **Owner** and **User Access Administrator** for all principal types; users, group, and service principals. This is done by negating the expression by ticking the checkbox when configuring what roles can be assigned.
+In this example I'm using the advanced condition editor. Users are able to assign all roles except **Owner** and **User Access Administrator** for all principal types; users, group, and service principals. This is done by negating the expression by ticking the checkbox when configuring what roles can be assigned.
 
 An imporant thing to note here is that when a user assigns a role to another user not already present in the tenant, a guest invitation will be sent out, unless guest invitation is restricted.
 
@@ -128,7 +128,7 @@ $condition = "
 $Params = @{
     roleDefinitionId = "f58310d9-a9f6-439a-9e8d-f62e7b41a168" # Role Based Access Control Administrator
     objectId = "f2358f05-6fac-4a84-ad43-0f17ae694d18" # My Azure AD group
-    scope = "/subscriptions/3955eb45-74ab-49f6-ae3f-b35f6073ac8c"
+    scope = "/subscriptions/3955eb45-74ab-49f6-ae3f-b35f6073ac8c" # My scope (/subscriptions/<sub-id>)
     conditionVersion = "2.0"
     condition = $condition
 }
