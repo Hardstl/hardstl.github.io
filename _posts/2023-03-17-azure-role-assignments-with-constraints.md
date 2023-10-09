@@ -43,25 +43,32 @@ With this new feature, we can instead delegate Dara the ability to assign only c
 To get started follow the below steps.
 
 1. At your desired scope, go to the IAM blade and select **Add** to create a new role assignment.
-![arac-add](arac-add.png)
+
+    ![arac-add](arac-add.png)
 
 2. Select the **Privileged administrator roles** tab and find the Role Based Access Control Administrator role.
-![arac-role](arac-role.png)
+
+    ![arac-add-2](arac-add-2.png)
 
 3. Add the desired User or Group that should be able to delegate roles at the scope.
-![arac-members](arac-members.png)
 
-4. Select **Add condition** to define the conditions
-![arac-addcondition](arac-addcondition.png)
+    ![arac-members](arac-members.png)
+
+4. Select **Add condition** to define the conditions.
+
+    ![arac-addcondition](arac-addcondition.png)
 
 5. The portal will present three templates that can be used, and in this example I'm using the middle one. It will allow me to target what roles users in the **Az_Analytics_Users** group can assign, and to what identity types. Opening the advanced condition editor will present the full configuration experience that allows for finer tuning. For example, users can create role assignments, but not delete them.
-![arac-types](arac-types.png)
+
+    ![arac-types](arac-types.png)
 
 6. I want them to be able to assign **Key Vaults Secrets User** and **Storage Blob Data Contributor** to **ServicePrincipals**.
-![arac-addcondition-2](arac-addcondition-2.png)
+
+    ![arac-addcondition-2](arac-addcondition-2.png)
 
 7. Hit save and the configuration will be presented before assignment is made.
-![arac-addcondition-3](arac-addcondition-3.png)
+
+    ![arac-addcondition-3](arac-addcondition-3.png)
 
 8. That's it! Users in the group **Az_Analytics_Users** are now able to assign the roles specified in the expression to ServicePrincipals. If they try to assign any other roles they'll be denied.
 
