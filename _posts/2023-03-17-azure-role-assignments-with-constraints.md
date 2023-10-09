@@ -26,7 +26,7 @@ On the other hand, if given full permissions, someone inexperienced with Azure o
 
 ## Delegate role assignments with constraints
 
-With this new feature, we can instead delegate Dara the ability to assign only certain principal types and roles in the subscription. For example, we can allow Dara and their team members to assign only ServicePrincipals the **Key Vaults Secrets User** and **Storage Blob Data Contributor** roles. With this in place, the team is now able to create that Azure Function with a Managed Identity and assign it the **Storage Blob Data Contributor** for any resource inside that subscription.
+With this new feature, we can instead delegate Dara the ability to assign only certain principal types and roles in the subscription. For example, we can allow Dara and their team members to assign only Service principals the **Key Vaults Secrets User** and **Storage Blob Data Contributor** roles. With this in place, the team is now able to create that Azure Function with a Managed Identity and assign it the **Storage Blob Data Contributor** for any resource inside that subscription.
 
 ### Constrains example
 
@@ -62,7 +62,7 @@ To get started follow the below steps.
 
     ![arac-types](arac-types.png)
 
-6. I want them to be able to assign **Key Vaults Secrets User** and **Storage Blob Data Contributor** to **ServicePrincipals**.
+6. I want them to be able to assign **Key Vaults Secrets User** and **Storage Blob Data Contributor** to **Service principals**.
 
     ![arac-addcondition-2](arac-addcondition-2.png)
 
@@ -70,7 +70,7 @@ To get started follow the below steps.
 
     ![arac-addcondition-3](arac-addcondition-3.png)
 
-8. That's it! Users in the group **Az_Analytics_Users** are now able to assign the roles specified in the expression to ServicePrincipals. If they try to assign any other roles they'll be denied.
+8. That's it! Users in the group **Az_Analytics_Users** are now able to assign the roles specified in the expression to Service principals. If they try to assign any other roles they'll be denied.
 
 We can also configure everything using PowerShell.
 
