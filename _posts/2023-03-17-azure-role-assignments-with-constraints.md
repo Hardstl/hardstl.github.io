@@ -26,7 +26,7 @@ On the other hand, if given full permissions, someone inexperienced with Azure o
 
 ## Delegate role assignments with constraints
 
-With this new feature, we can instead delegate Dara the ability to assign only certain principal types and roles in the subscription. For example, we can allow Dara and their team members to assign only Service principals the **Key Vaults Secrets User** and **Storage Blob Data Contributor** roles. With this in place, the team is now able to create that Azure Function with a Managed Identity and assign it the **Storage Blob Data Contributor** for any resource inside that subscription.
+With this new feature, we can instead delegate Dara the ability to assign only certain roles and principal types. For example, we can allow Dara and their team members to assign only Service principals the **Key Vaults Secrets User** and **Storage Blob Data Contributor** roles. With this in place, the team is now able to create that Azure Function with a Managed Identity and assign it the **Storage Blob Data Contributor** for any resource inside that subscription.
 
 ### Constrains example
 
