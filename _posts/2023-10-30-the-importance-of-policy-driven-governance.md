@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Importance of Policy Driven Governance"
+title: "The Importance of Policy-Driven Governance"
 date: 2023-10-29 14:00:00 -0000
 categories: [Governance]
 tags: [Azure, Policy, Governance]
@@ -19,7 +19,7 @@ But fear not, for we are not here to merely point out the flaws. We'll embark on
 
 The application is published by an Application Gateway in Azure. An Application Gateway supports having a Web Application Firewall (WAF) policy assigned to the service or the individual configured sites (listeners). This is often missed when setting up the gateway, and makes all published sites vulnerable to attacks such as Cross-Site Scripting (XSS) and Sql Injection when not protected by the included OWASP rules.
 
-A recommended approach would be to make sure the Application Gateway service has a WAF policy in prevention mode assigned to it. If a specific site in the gateway need to be in detection mode, assign a WAF policy to the listener and that will take presedence over the gateway policy.
+A recommended approach would be to make sure the Application Gateway service has a WAF policy in prevention mode assigned to it. If a specific site in the gateway needs to be in detection mode, assign a WAF policy to the listener and that will take precedence over the gateway policy.
 
 There are a few built-in policies that could help ensure the Application Gateway is secured. Clicking the link will take you to the policy in the Azure portal.
 
@@ -33,14 +33,14 @@ The second policy will Deny the deployment of WAF policies not in the specified 
 
 ![trafficFlow-2](trafficFlow-2.png)
 
-The application connects to a public Azure SQL database. This is probabably the most used scenario today, and is not inherently wrong. If your company has decided on a private networking approach, the Azure SQL server should be placed on the company network behind a Private Endpoint. The idea of Private Endpoints is great, but I can almost guarantee that the concept is lost on the majority of Azure administrators and developers today.
+The application connects to a public Azure SQL database. This is probably the most used scenario today, and is not inherently wrong. If your company has decided on a private networking approach, the Azure SQL server should be placed on the company network behind a Private Endpoint. The idea of Private Endpoints is great, but I can almost guarantee that the concept is lost on many of Azure administrators and developers today.
 
 To help everyone out there are a few built-in policies. Clicking the link will take you to the policy in the Azure portal.
 
 This policy will Deny the deployment of an Azure SQL server if the `publicNetworkAccess` property is enabled, meaning the only way to connect is by creating a Private Endpoint. \
 [Public network access on Azure SQL Database should be disabled](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F1b8ca024-1d5c-4dec-8995-b1a932b41780)
 
-Searching the policy definitions in Azure for `to use private DNS zones` will show all built-in policies used to register DNS records for the Private Endpoints in the privatelink zones. For some reason there's no policy for Azure SQL server yet.
+Searching for the policy definitions in Azure for `to use private DNS zones` will show all the built-in policies used to register DNS records for the Private Endpoints in the privatelink zones. For some reason there's no policy for Azure SQL servers yet.
 
 The Azure Landing Zones repository on [Github](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies#corp) bundles a lot of the necessary policies together in initatives for this specific purpose under the `Corp` management group scope.
 
@@ -52,7 +52,7 @@ A poorly configured storage account with `allowBlobPublicAccess` enabled could b
 
 ![newcontainer](newcontainer.png)
 
-To disable `allowBlobPublicAccess` by default, this custom modify policy can be created that configures `allowBlobPublicAccess` to be disabled during resource creation or update. Whenever someone creates a new storage account or does a change to an existing one, it will be switched to disabled. If you need it to be enabled, create a policy exemption targeting the storage account.
+To disable `allowBlobPublicAccess` by default, this custom modify policy can be created that configures `allowBlobPublicAccess` to be disabled during resource creation or update. Whenever someone creates a new storage account or makes a change to an existing one, it will be switched to disabled. If you need it to be enabled, create a policy exemption targeting the storage account.
 
 ```json
 {
@@ -138,7 +138,7 @@ resources
 
 ![trafficFlow-4](trafficFlow-4.png)
 
-There's a management VM that developers are using by connecting to it via RDP. The spoke network is connected to the hub, giving it access to the company on-premises environment. A public IP has been assigned to the NIC of the VM, providing inbound access to the VM from the internet. The Network Security Group assigned to the Management subnet has an inbound rule allowing traffic from Any to Any over port TCP/3389. This is about as bad as it gets, but is a regular occurance.
+There's a management VM that developers use by connecting to it via RDP. The spoke network is connected to the hub, giving it access to the company's on-premises environment. A public IP has been assigned to the NIC of the VM, providing inbound access to the VM from the internet. The Network Security Group assigned to the Management subnet has an inbound rule allowing traffic from Any to Any over port TCP/3389. This is about as bad as it gets, but is a regular occurrence.
 
 ![inbound-rdp](inbound-rdp.png)
 
@@ -214,7 +214,7 @@ The second policy will instead deny when a network interface (NIC) is being asso
 }
 ```
 
-Opening management traffic such as RDP and SSH from anywhere on the internet is something we should always refrain from doing. Using Microsoft Defender for Cloud and looking at the recommendation `Management ports should be closed on your virtual machines` you can easily see which VMs in your environment are vulnerable.
+Allowing management traffic such as RDP and SSH from anywhere on the internet is something we should always refrain from doing. Using Microsoft Defender for Cloud and looking at the recommendation `Management ports should be closed on your virtual machines` you can easily see which VMs in your environment are vulnerable.
 
 The following custom policy will deny the creation of any rules created with Any (*) or Internet as source if the destination port is 3389. You can still open RDP from the internet by specifying a public IP as source.
 
@@ -329,12 +329,14 @@ The following custom policy will deny the creation of any rules created with Any
 
 ![trafficFlow-5](trafficFlow-5.png)
 
-The journey is reaching its end, and I hope that through visualizing the different components and how easy it is to make configuration errors, the importance of having a policy driven governance in Azure is clear. I'd like to wrap things up with a final drawing showing how the setup could have been different were the policies in place to begin with.
+The journey is reaching its end, and I hope that through visualizing the different components and how easy it is to make configuration errors, the importance of having a policy-driven governance in Azure is clear. I'd like to wrap things up with a final drawing showing how the setup could have been different were the policies in place to begin with.
 
 1. There are now two Web Application Firewall policies assigned. One to the Application Gateway service in prevention mode and another to the site listener in prevention mode. Disabling any of the OWASP rules can now easily be done in the site listener policy, only affecting that site, leaving other newly created sites protected from the service policy.
 
 2. The Azure SQL server has been placed in its own subnet by creating a Private Endpoint and attaching it to the server. By having the Private Endpoint there, we can now disable public network access.
 
-3. The storage account no longer allows anonymous access to blobs. To get around this a policy exemption must be made by the central IT team with a justification for why it's needed. This resource could also be placed in the Private Endpoint subnet and have its public network access disabled completely.
+3. The storage account no longer allows anonymous access to blobs. To get around this, a policy exemption must be made by the central IT team with a justification for why it's needed. This resource could also be placed in the Private Endpoint subnet and have its public network access disabled completely.
 
-4. The public IP has been removed from the VM, meaning all access must be done from inside the corporate network or VPN. This will greatly reduce the attack surface and the traffic can also be filtered in a firewall for more granular access.
+4. The public IP has been removed from the VM, meaning all access must be done from inside the corporate network or VPN. This will greatly reduce the attack surface and the traffic can also be filtered through a firewall for more granular access.
+
+If you don't know where to start or just want to save some time, apply the policy pack from ALZ that you can find [here](https://github.com/Azure/ALZ-Bicep/tree/main/infra-as-code/bicep/modules/policy/assignments/alzDefaults). It's a great starting point in your journey towards policy-driven governance.
