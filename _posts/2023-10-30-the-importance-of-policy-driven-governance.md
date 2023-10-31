@@ -11,7 +11,7 @@ In Azure, following a policy-driven approach to governance is crucial. It's all 
 
 In this post, I want to take you on a journey of a small application setup. It's a journey that leads us through the vast landscape of Azure services, but, much like a trail in need of some maintenance, we'll find that not all is as it should be.
 
-But fear not, for we are not here to merely point out the flaws. We'll embark on a quest to uncover the issues and, more importantly, to discover how Azure Policy can come to the rescue, serving as our trusty guide in the journey to securing and optimizing this Azure landscape.
+But fear not, for we are not here to merely point out the flaws. We'll embark on a quest to uncover the issues and, more importantly, to discover how Azure Policy can come to the rescue, serving as our trusty guide in the journey to securing and optimizing this Azure landscape. 
 
 ## (1) The Vulnerable Frontend
 
