@@ -7,13 +7,15 @@ tags: [PowerShell, AI, Azure]
 img_path: /assets/img/2025-03-10-ai-agent-coding-for-admins/
 ---
 
-Like many of you, my first real exposure to AI was when ChatGPT dropped. I was blown away by what it could do, spent way too much time prompting it with random stuff, used it for some PowerShell, and tried out the voice feature when that launched. Mostly, I've used AI for things like writing docs, double-checking my grammar and English, and making some funny pictures.
+Like many of you, my first real exposure to AI was when ChatGPT dropped. I spent way too much time prompting it with random stuff, used it for some PowerShell, and tried out the voice feature when that launched. Mostly, I've used AI for things like writing docs, double-checking my grammar and English, and making some funny pictures.
 
 Right before DeepSeek R1 came out and shook things up, I started messing around with AI agent coding using Aider. But I quickly realized I didn't have enough time to really get the hang of it. Then DeepSeek R1 launched with ridiculously cheap API pricing, so I decided to give AI coding another shot, but this time with a tool called RooCline (now rebranded as Roo Code). And honestly, that really opened my eyes on how powerful AI coding has become.
 
 ## AI Coding Agents: What are they?
 
-AI agents are software that use AI to perform tasks, assist with coding, automate workflows, or even act as interactive assistants. In the context of coding, AI agents go beyond simple autocomplete or code suggestions as they can understand intent, refactor code, debug issues, and even architect solutions. The agents could be stand-alone IDEs, VS Code extensions, or CLI based. What they share is the ability to select which AI model you want to route requests to, enabling you to choose the right model for a certain task.
+They write code for you, but that's just the beginning.
+
+AI agents do more than just autocomplete your code as they understand what you're trying to achieve. They can refactor, debug, and even help design entire solutions. Whether they're built into your IDE, available as a VS Code extension, or running in the command line, these tools make development more efficient and streamlined. What they share is the ability to select which AI model you want to route requests to, enabling you to choose the right model for a certain task.
 
 **Agents:**
 
@@ -69,7 +71,7 @@ This was just a quick example to show off the different modes, how handy auto-ap
 
 **Model Context Protocol servers**
 
-MCP servers are able to supercharge your coding agents as they provide an open protocol that standardizes how applications provide context to LLMs. For example, you could have one server that connects the agent to your GitHub and another one that provides browser automation using Puppeteer. There's a [bunch](https://github.com/modelcontextprotocol/servers?tab=readme-ov-file) to choose from.
+[Model Context Protocol (MCP) servers](https://github.com/modelcontextprotocol/servers?tab=readme-ov-file) are able to supercharge your agents as they are able to connect to external tools and data sources. At its core, MCP acts as a smart intermediary. When you ask a question, like checking the weather or digging into customer data, the system figures out exactly which tools to call upon. It hands off the task to a large language model that decides whether to query a database, hit an API, or run a code snippet, then gathers the results and delivers an answer.
 
 ## AI Agent Coding for Admins
 
