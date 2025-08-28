@@ -4,7 +4,7 @@ title: "Why App Service Environment v3 is Awesome!"
 date: 2023-04-05 14:00:00 -0000
 categories: [Network]
 tags: [Azure, Network]
-img_path: /assets/img/2023-04-05-why-asev3-is-awesome/
+media_subpath: /assets/img/2023-04-05-why-asev3-is-awesome/
 ---
 
 The App Service Environment v3 has brought significant improvements to secure cloud computing. It offers a range of features that enhance the performance, security, and scalability of web applications. With this new version, developers and IT professionals can create and deploy secure web applications more efficiently without having to worry about infrastructure management.
@@ -53,7 +53,7 @@ Deploying a new ASEv3 instance is rather straight forward. The deployment usuall
 1. Search for App Service Environment v3 in the marketplace to get started. On the Basics blade, select Internal or External and enter a name for the instance. The name must be globally unique and any applications deployed will be accessed using this name. For example, an App Service with the name **my-test-app-100** will be accessed by going to **my-test-app-100.hardstahl.appserviceenvironment.net**.
    ![new-ase-1](new-ase-1.png)
 
-2. Dedicated hardware is most likely overkill for most scenarios. Zone redundancy sounds like something you'd want, but the base cost of the instance will then be the sum of **9 Windows I1v2 plans**.
+2. Dedicated hardware is most likely overkill for most scenarios. Zone redundancy sounds like something you'd want, but the base cost of the instance will then be the sum of **3 Windows I1v2 plans**.
    ![new-ase-2](new-ase-2.png)
 
 3. The minimum subnet it can be deployed to is /27 and the recommended size is a /24. It has to be an empty subnet and be delegated to **Microsoft.Web/hostingEnvironments**. Selecting **Azure DNS Private Zone** will in this case create a zone in the resource group called **hardstahl.appserviceenvironment.net** and link it to the virtual network.

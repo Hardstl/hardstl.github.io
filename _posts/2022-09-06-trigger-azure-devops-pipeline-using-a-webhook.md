@@ -4,7 +4,7 @@ title: "Trigger Azure DevOps Pipeline using a Webhook"
 date: 2022-09-06 14:00:00 -0000
 categories: [Azure DevOps]
 tags: [Azure, Azure DevOps]
-img_path: /assets/img/2022-09-06-trigger-azure-devops-pipeline-using-a-webhook/
+media_subpath: /assets/img/2022-09-06-trigger-azure-devops-pipeline-using-a-webhook/
 ---
 
 I have always wanted to learn a bit of Python, so I set out to do a project in Django where I have a form that I can fill out and when submitted it will start an Azure DevOps pipeline and provide the data from the form as parameters.

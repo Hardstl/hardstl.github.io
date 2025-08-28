@@ -4,7 +4,7 @@ title: "What is this Private Endpoint, and where can I buy one? (Part 2)"
 date: 2022-03-12 14:00:00 -0000
 categories: [Private Endpoint]
 tags: [Azure, Network, Private Endpoint]
-img_path: /assets/img/2022-03-12-private-endpoint-part2/
+media_subpath: /assets/img/2022-03-12-private-endpoint-part2/
 ---
 
 In part 1 I gave an introduction on how to set up Private Endpoint and DNS and mentioned that the privatelink DNS zones should be handled centrally by your IT or Azure team. In this post I'll expand on how we can do just that by automating certain tasks, and how we should look at managing all of this.

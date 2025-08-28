@@ -4,7 +4,7 @@ title: "Resolving Conflicts for Private Endpoint DNS"
 date: 2022-11-17 14:00:00 -0000
 categories: [Private Endpoint]
 tags: [Azure, Private Endpoint]
-img_path: /assets/img/2022-11-17-resolving-conflicts-for-private-endpoint-dns/
+media_subpath: /assets/img/2022-11-17-resolving-conflicts-for-private-endpoint-dns/
 ---
 
 Automating the process of creating Private Endpoint DNS configurations in their respective zones is key for a successful private networking implementation in Azure.

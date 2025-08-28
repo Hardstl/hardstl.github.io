@@ -4,7 +4,7 @@ title: "SQL Managed Instance AD Integration"
 date: 2022-03-15 14:00:00 -0000
 categories: [SQL]
 tags: [Azure, SQL]
-img_path: /assets/img/2022-03-15-sql-managed-instance-ad-integration/
+media_subpath: /assets/img/2022-03-15-sql-managed-instance-ad-integration/
 ---
 
 In this post we’ll talk about authenticating to SQL Managed Instance using Azure AD and Active Directory users and groups. If you’re running SQL server on-premises you most likely already have a standardized way of creating users and groups for your SQL servers and databases. These service accounts might be used in your different application connection strings, and AD groups for handling permissions such as db_datareader or db_datawriter.

@@ -4,7 +4,7 @@ title: "Azure SQL Networking and the Lifecycle of Private Endpoints"
 date: 2022-04-04 14:00:00 -0000
 categories: [Private Endpoint]
 tags: [Azure, SQL, Private Endpoint]
-img_path: /assets/img/2022-04-04-azure-sql-private-endpoint/
+media_subpath: /assets/img/2022-04-04-azure-sql-private-endpoint/
 ---
 
 Alright, so you’re thinking of enabling Private Endpoints for your Azure SQL server to increase your security posture and disable incoming connections from the internet. Maybe you’re hesitant because you don’t know if your applications or users will be able to connect once enabled.
@@ -15,11 +15,11 @@ In this post we’ll take a look at how we can manage connections to Azure SQL a
 
 # Setup
 
-| Resource | Type | Description |
-| -------- | ---- | ----------- |
-| LabstahlPC01 | Windows 10 client | Used to demonstrate connections using SSMS and Test-NetConnection |
-| SRV-DC-01 | Domain Controller | Set up with forwarders to handle Private Endpoint connections |
-| sql-privateendpoint-noea-test | Azure SQL | Azure SQL server accepting connections from the client, both over the internet and Private Endpoint |
+| Resource                      | Type              | Description                                                                                         |
+| ----------------------------- | ----------------- | --------------------------------------------------------------------------------------------------- |
+| LabstahlPC01                  | Windows 10 client | Used to demonstrate connections using SSMS and Test-NetConnection                                   |
+| SRV-DC-01                     | Domain Controller | Set up with forwarders to handle Private Endpoint connections                                       |
+| sql-privateendpoint-noea-test | Azure SQL         | Azure SQL server accepting connections from the client, both over the internet and Private Endpoint |
 
 # Connections
 
