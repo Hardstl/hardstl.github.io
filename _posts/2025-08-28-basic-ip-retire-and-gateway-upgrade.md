@@ -27,7 +27,7 @@ resources
 
 For us to be able to use the built-in [Gateway SKU Migration](https://learn.microsoft.com/en-us/azure/expressroute/gateway-migration) wizard to upgrade our ExpressRoute gateway, we need the GatewaySubnet where the gateway is deployed into to be of size /27 or larger. In our case the subnet size is /28, meaning we can't use the built-in wizard. Luckily for us, there's a [feature in preview](https://learn.microsoft.com/en-us/azure/virtual-network/how-to-multiple-prefixes-subnet?tabs=powershell) that lets us add additional address prefixes to a subnet.
 
-![GatewaySubnet-28](gatewaysubnet-1.png)
+![GatewaySubnet](gatewaysubnet.png)
 
 Using PowerShell we can add an additional address prefix by running the below commands. I haven't experienced any downtime or issues by running the commands.
 
