@@ -4,7 +4,7 @@ title: "PIM Party ft. Az Module"
 date: 2022-05-30 14:00:00 -0000
 categories: [PIM, PowerShell]
 tags: [Azure, PIM, PowerShell]
-img_path: /assets/img/2022-05-30-pim-party-ft-az-module/
+media_subpath: /assets/img/2022-05-30-pim-party-ft-az-module/
 ---
 
 Privileged Identity Management (PIM) in Azure helps you manage and monitor access to your Azure resources. It’s a great service that lets you set up just-in-time access with additional security controls for your management groups, subscriptions or resource groups. It can also be used for Azure AD resources, but that’s outside of the scope of this post.

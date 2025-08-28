@@ -4,7 +4,7 @@ title: "Azure Role Assignments with Constraints"
 date: 2023-10-09 14:00:00 -0000
 categories: [Governance]
 tags: [Azure, RBAC, Governance]
-img_path: /assets/img/2023-10-09-azure-role-assignments-with-constraints/
+media_subpath: /assets/img/2023-10-09-azure-role-assignments-with-constraints/
 ---
 
 If you've worked in Azure, you have definitely come across managing access using Role Based Access Control (RBAC) and have been met with different challenges. Until recently, the RBAC model in Azure has been missing a key piece: the ability to enforce constraints on the delegation of role assignments. This missing piece has led to a less than ideal user experience for those managing Azure resources. Fortunately, Azure Role Assignments with Constraints is here, hopefully providing the missing piece to a complete RBAC model in Azure. With this new feature, IT administrators and stakeholders can now easily and securely manage access to Azure resources, greatly improving the experience for all parties.

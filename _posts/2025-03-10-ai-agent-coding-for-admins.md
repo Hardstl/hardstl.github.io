@@ -4,7 +4,7 @@ title: "AI Agent Coding for Admins"
 date: 2025-03-10 14:00:00 -0000
 categories: [PowerShell]
 tags: [PowerShell, AI, Azure]
-img_path: /assets/img/2025-03-10-ai-agent-coding-for-admins/
+media_subpath: /assets/img/2025-03-10-ai-agent-coding-for-admins/
 ---
 
 Like many of you, my first real exposure to AI was when ChatGPT dropped. I spent way too much time prompting it with random stuff, used it for some PowerShell, and tried out the voice feature when that launched. Mostly, I've used AI for things like writing docs, double-checking my grammar and English, and making some funny pictures.

@@ -4,7 +4,7 @@ title: "What is this Private Endpoint, and where can I buy one? (Part 1)"
 date: 2022-03-07 14:00:00 -0000
 categories: [Private Endpoint]
 tags: [Azure, Network, Private Endpoint]
-img_path: /assets/img/2022-03-07-private-endpoint-part1/
+media_subpath: /assets/img/2022-03-07-private-endpoint-part1/
 ---
 
 That's a good question and something I'm going to try and answer in my first blog series. If you're like me you've probably browsed the Azure Security Center recommendations to get a better understanding of your secure score and what you can do to improve it, or maybe you have a server on-premises with no outbound internet connectivity that need access to a Storage Account blob in Azure.

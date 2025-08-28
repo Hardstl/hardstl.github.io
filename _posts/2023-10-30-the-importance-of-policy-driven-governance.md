@@ -4,7 +4,7 @@ title: "The Importance of Policy-Driven Governance"
 date: 2023-10-29 14:00:00 -0000
 categories: [Governance]
 tags: [Azure, Policy, Governance]
-img_path: /assets/img/2023-10-30-the-importance-of-policy-driven-governance/
+media_subpath: /assets/img/2023-10-30-the-importance-of-policy-driven-governance/
 ---
 
 In Azure, following a policy-driven approach to governance is crucial. It's all about making sure that everyone who uses Azure can't set things up the wrong way. Imagine having a set of clear instructions that everyone must stick to, like a recipe for cooking. These policies are like those instructions, and they guarantee that all the services are set up securely and adhere to the company standards. They're there to prevent mistakes and make sure everything is in order, so that Azure stakeholders can't accidentally configure things the wrong way. It's like having a recipe for success in Azure.
