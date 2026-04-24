@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Becoming an AI bot"
-date: 2026-04-24 09:00:00
+date: 2026-04-24 08:00:00
 categories: [AI]
 tags: [AI]
 ---
