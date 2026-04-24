@@ -8,6 +8,10 @@
 
 set -eu
 
+# html-proofer treats any DEBUG value as "load the debug gem", and this
+# container exports DEBUG=release by default. Clear it before running tests.
+unset DEBUG
+
 SITE_DIR="_site"
 
 _config="_config.yml"

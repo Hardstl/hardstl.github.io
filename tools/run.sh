@@ -6,6 +6,10 @@ prod=false
 command="bundle exec jekyll s -l"
 host="127.0.0.1"
 
+# html-proofer treats any DEBUG value as "load the debug gem", and this
+# container exports DEBUG=release by default. Clear it for local Bundler runs.
+unset DEBUG
+
 help() {
   echo "Usage:"
   echo
