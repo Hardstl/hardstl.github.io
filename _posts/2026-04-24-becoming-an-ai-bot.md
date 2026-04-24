@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Becoming an AI bot"
-date: 2026-04-24 08:00:00
+date: 2026-04-24
 categories: [AI]
 tags: [AI]
 ---
@@ -34,7 +34,7 @@ Let's look at a few extremely common examples that I see basically every day.
 - "It's not cloud-native, it's legacy infrastructure in Azure."
 - "It's not governance, it's a spreadsheet with opinions."
 
-## The three musketeers
+## Three kinds of posters
 
 This is us, we're all here in some way or form.
 
