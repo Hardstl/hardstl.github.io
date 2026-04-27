@@ -38,11 +38,11 @@ Subscription vending is where ALZ becomes usable for the rest of the organizatio
 
 Now this riddle has puzzled historians for decades, and it still isn't all that clear. But I want to give my view of what Corp vs. Online (Private vs Public) is.
 
-**Corp** is where we deploy workloads that require private connectivity to other landing zones or on-premises. It can also be workloads that require maximum security but no outbound connectivity from the actual landing zone. Deploying a workload here shouldn't automatically give it access to other landing zones or on-premises as there should be a firewall in the hub.
+**Corp** is where we deploy workloads that require private connectivity to other landing zones or on-premises. It can also be workloads that require maximum security but no private outbound connectivity from the actual landing zone. Deploying a workload here shouldn't automatically give it access to other landing zones or on-premises as there should be a firewall in the hub.
 
 **Online** is where we more freely can deploy workloads without the private network requirement. This doesn't make the workloads unsecure. You can still configure resource firewalls, VNets, service endpoints, and even private endpoints if you feel like it. You just won't have a pre-created VNet with a reserved IP address space and a peering to the hub.
 
-Here's the thing though, both of these are valid places to host workloads that can be reached from the internet.
+Here's the thing though, both of these are valid places to host workloads that can be reached from the internet. We should always expose workloads as securely as possible though using WAF for example.
 
 From a policy perspective, the only difference between Corp and Online is a few policies that are applied to Corp, but not Online. Let's focus on which policies matters for this post:
 
