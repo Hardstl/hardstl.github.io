@@ -218,3 +218,6 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+# Publish Tesla's public key for vehicle command authentication.
+include:
+  - .well-known
